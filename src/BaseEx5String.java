@@ -3,6 +3,8 @@ import java.util.*;
 public class BaseEx5String {
 
 	public static void main(String[] args) {
+		
+		System.out.println(isPalindrome("chine"));
 		// Premiere partie de l'exercice, deux façons de concatener deux strings entre elles
 		String a = "Premiere phrase";
 		String b = "Deuxième phrase";
@@ -40,6 +42,19 @@ public class BaseEx5String {
 		System.out.println(joinedSentence);
 		
 		
+	}
+	
+	// Determine si le mot est un palindrome
+	public static boolean isPalindrome(String word) {
+		String [] wordArray =  word.split("");
+		for (int i=0,j=wordArray.length-1;i<j;i++,j--) {				
+				System.out.println(wordArray[i] +"  "+ wordArray[j]);
+				if(!wordArray[i].equals(wordArray[j])) {
+					return false;
+				}
+			
+		}
+		return true;
 	}
 
 	public static void findWord(String wordToFind, String[] sentenceArray) {
