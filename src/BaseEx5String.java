@@ -4,7 +4,7 @@ public class BaseEx5String {
 
 	public static void main(String[] args) {
 		
-		System.out.println(isPalindrome("chine"));
+		System.out.println(isPalindrome("elu par cette crapule"));
 		// Premiere partie de l'exercice, deux façons de concatener deux strings entre elles
 		String a = "Premiere phrase";
 		String b = "Deuxième phrase";
@@ -46,8 +46,11 @@ public class BaseEx5String {
 	
 	// Determine si le mot est un palindrome
 	public static boolean isPalindrome(String word) {
-		String [] wordArray =  word.split("");
-		for (int i=0,j=wordArray.length-1;i<j;i++,j--) {				
+		// supprime les espaces
+		String cleanedWord = word.replace(" ", "").toLowerCase(); 
+		String [] wordArray =  cleanedWord.split("");
+		for (int i=0,j=wordArray.length-1;i<j;i++,j--) {
+				
 				System.out.println(wordArray[i] +"  "+ wordArray[j]);
 				if(!wordArray[i].equals(wordArray[j])) {
 					return false;
