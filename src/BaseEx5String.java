@@ -11,7 +11,17 @@ public class BaseEx5String {
 		System.out.println(a.concat(",").concat(b));
 		
 		
+		// Deuxième partie de l'exercice, détecter un mot dans une chaîne
 		
+		String wordToFind = "beau";
+		String sentence = "il fait beau aujourd'hui";
+		String [] sentenceArray =  sentence.split(" ");
+		
+		for (int i = 0; i<sentenceArray.length;i++) {
+			if (sentenceArray[i].equals(wordToFind)) {
+				System.out.println("trouvé");
+			}
+		}
 		
 		
 		
